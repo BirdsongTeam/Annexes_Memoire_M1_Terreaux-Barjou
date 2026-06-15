@@ -57,11 +57,7 @@ fviz_dend(res.hc, cex = 0.5)
 grp <- cutree(res.hc, k = 5)
 head(grp, n = 5)
 
-fviz_dend(res.hc, k = 5, 
-          k_colors = c("#1B9E77", "#D95F02", "#7570B3", "#E7298A", "#672"))
-
-hc.cut <- hcut(res.dist, k = 5, hc_method = "complete")
-
-fviz_dend(hc.cut, show_labels = TRUE, rect = TRUE)
+fviz_dend(hc.cut, show_labels = TRUE, rect = TRUE,
+          k_colors = c("#1B9E77", "#57B9FF", "#C71585", "#FF866A", "#798933"))
 
 fviz_cluster(hc.cut, hyoidNUM, ellipse.type = "convex")
